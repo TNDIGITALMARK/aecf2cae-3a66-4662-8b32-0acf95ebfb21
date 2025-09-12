@@ -2,10 +2,10 @@
   "projectId": "aecf2cae-3a66-4662-8b32-0acf95ebfb21",
   "userId": "hw8u8FgXeBcQGo9CRezTWmEivX92",
   "version": "1.0.0",
-  "generatedAt": "2025-09-12T16:34:08.355Z",
+  "generatedAt": "2025-09-12T16:38:46.346Z",
   "components": {
-    "phoenix-1757694848315": {
-      "phoenixId": "phoenix-1757694848315",
+    "phoenix-1757695126311": {
+      "phoenixId": "phoenix-1757695126311",
       "componentName": "Error",
       "filePath": "src/app/error.tsx",
       "lineNumber": 5,
@@ -22,8 +22,8 @@
         "complexity": "moderate"
       }
     },
-    "phoenix-1757694848316": {
-      "phoenixId": "phoenix-1757694848316",
+    "phoenix-1757695126312": {
+      "phoenixId": "phoenix-1757695126312",
       "componentName": "GlobalError",
       "filePath": "src/app/global-error.tsx",
       "lineNumber": 5,
@@ -53,13 +53,13 @@
         "complexity": "complex"
       }
     },
-    "phoenix-1757694848317": {
-      "phoenixId": "phoenix-1757694848317",
+    "phoenix-1757695126313": {
+      "phoenixId": "phoenix-1757695126313",
       "componentName": "RootLayout",
       "filePath": "src/app/layout.tsx",
       "lineNumber": 25,
       "columnNumber": 15,
-      "sourceCode": "export default function RootLayout({\n  children,\n}: Readonly<{\n  children: React.ReactNode;\n}>) {\n  return (\n    <html lang=\"en\" suppressHydrationWarning>\n      <body\n        className={`${geistSans.variable} ${geistMono.variable} antialiased`}\n      >\n        <script src=\"/phoenix-tracking.js\" async></script>\n        <QueryProvider>\n          <ThemeProvider\n            attribute=\"class\"\n            defaultTheme=\"system\"\n            enableSystem\n            disableTransitionOnChange\n          >\n            <TooltipProvider>\n              {children}\n              <Toaster />\n              <Sonner />\n            </TooltipProvider>\n          </ThemeProvider>\n        </QueryProvider>\n      </body>\n    </html>\n  );\n}",
+      "sourceCode": "export default function RootLayout({\n  children,\n}: Readonly<{\n  children: React.ReactNode;\n}>) {\n  return (\n    <html lang=\"en\" suppressHydrationWarning>\n      <body\n        className={`${geistSans.variable} ${geistMono.variable} antialiased`}\n      >\n        <script src=\"/phoenix-tracking.js\" async></script>\n\n        <QueryProvider>\n          <ThemeProvider\n            attribute=\"class\"\n            defaultTheme=\"system\"\n            enableSystem\n            disableTransitionOnChange\n          >\n            <TooltipProvider>\n              {children}\n              <Toaster />\n              <Sonner />\n            </TooltipProvider>\n          </ThemeProvider>\n        </QueryProvider>\n      </body>\n    </html>\n  );\n}",
       "props": [
         {
           "name": "children",
@@ -79,8 +79,8 @@
         "complexity": "complex"
       }
     },
-    "phoenix-1757694848318": {
-      "phoenixId": "phoenix-1757694848318",
+    "phoenix-1757695126314": {
+      "phoenixId": "phoenix-1757695126314",
       "componentName": "Loading",
       "filePath": "src/app/loading.tsx",
       "lineNumber": 1,
@@ -97,8 +97,8 @@
         "complexity": "moderate"
       }
     },
-    "phoenix-1757694848319": {
-      "phoenixId": "phoenix-1757694848319",
+    "phoenix-1757695126315": {
+      "phoenixId": "phoenix-1757695126315",
       "componentName": "NotFound",
       "filePath": "src/app/not-found.tsx",
       "lineNumber": 3,
@@ -115,8 +115,8 @@
         "complexity": "moderate"
       }
     },
-    "phoenix-1757694848320": {
-      "phoenixId": "phoenix-1757694848320",
+    "phoenix-1757695126316": {
+      "phoenixId": "phoenix-1757695126316",
       "componentName": "IglooBuilder",
       "filePath": "src/app/page.tsx",
       "lineNumber": 5,
@@ -140,8 +140,8 @@
         "complexity": "complex"
       }
     },
-    "phoenix-1757694848321": {
-      "phoenixId": "phoenix-1757694848321",
+    "phoenix-1757695126317": {
+      "phoenixId": "phoenix-1757695126317",
       "componentName": "QueryProvider",
       "filePath": "src/components/query-provider.tsx",
       "lineNumber": 6,
@@ -168,8 +168,8 @@
         "complexity": "moderate"
       }
     },
-    "phoenix-1757694848322": {
-      "phoenixId": "phoenix-1757694848322",
+    "phoenix-1757695126318": {
+      "phoenixId": "phoenix-1757695126318",
       "componentName": "ThemeProvider",
       "filePath": "src/components/theme-provider.tsx",
       "lineNumber": 6,
@@ -192,8 +192,8 @@
         "complexity": "simple"
       }
     },
-    "phoenix-1757694848323": {
-      "phoenixId": "phoenix-1757694848323",
+    "phoenix-1757695126319": {
+      "phoenixId": "phoenix-1757695126319",
       "componentName": "Badge",
       "filePath": "src/components/ui/badge.tsx",
       "lineNumber": 30,
@@ -221,8 +221,8 @@
         "complexity": "moderate"
       }
     },
-    "phoenix-1757694848324": {
-      "phoenixId": "phoenix-1757694848324",
+    "phoenix-1757695126320": {
+      "phoenixId": "phoenix-1757695126320",
       "componentName": "Calendar",
       "filePath": "src/components/ui/calendar.tsx",
       "lineNumber": 10,
@@ -257,8 +257,8 @@
         "complexity": "complex"
       }
     },
-    "phoenix-1757694848325": {
-      "phoenixId": "phoenix-1757694848325",
+    "phoenix-1757695126321": {
+      "phoenixId": "phoenix-1757695126321",
       "componentName": "Skeleton",
       "filePath": "src/components/ui/skeleton.tsx",
       "lineNumber": 3,
@@ -281,8 +281,8 @@
         "complexity": "simple"
       }
     },
-    "phoenix-1757694848326": {
-      "phoenixId": "phoenix-1757694848326",
+    "phoenix-1757695126322": {
+      "phoenixId": "phoenix-1757695126322",
       "componentName": "Toaster",
       "filePath": "src/components/ui/toaster.tsx",
       "lineNumber": 13,
@@ -306,6 +306,6 @@
   "stats": {
     "totalComponents": 12,
     "totalFiles": 62,
-    "processingTimeMs": 551
+    "processingTimeMs": 510
   }
 }
