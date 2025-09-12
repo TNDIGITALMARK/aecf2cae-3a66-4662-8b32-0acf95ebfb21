@@ -1,0 +1,309 @@
+{
+  "projectId": "aecf2cae-3a66-4662-8b32-0acf95ebfb21",
+  "userId": "hw8u8FgXeBcQGo9CRezTWmEivX92",
+  "version": "1.0.0",
+  "generatedAt": "2025-09-12T16:24:08.068Z",
+  "components": {
+    "phoenix-1757694248042": {
+      "phoenixId": "phoenix-1757694248042",
+      "componentName": "Error",
+      "filePath": "src/app/error.tsx",
+      "lineNumber": 5,
+      "columnNumber": 15,
+      "sourceCode": "export default function Error() {\n  return (\n    <div className=\"min-h-screen flex items-center justify-center\">\n      <div className=\"text-center\">\n        <h1 className=\"text-4xl font-bold mb-4\">500 - Server Error</h1>\n        <p className=\"text-xl mb-4\">Something went wrong. Please try again later.</p>\n        <a href=\"/\" className=\"text-blue-500 hover:text-blue-700 underline\">\n          Return to Home\n        </a>\n      </div>\n    </div>\n  );\n}",
+      "props": [],
+      "imports": [],
+      "modificationHints": [
+        "text-update",
+        "style-change"
+      ],
+      "astAnalysis": {
+        "componentType": "functional",
+        "complexity": "moderate"
+      }
+    },
+    "phoenix-1757694248043": {
+      "phoenixId": "phoenix-1757694248043",
+      "componentName": "GlobalError",
+      "filePath": "src/app/global-error.tsx",
+      "lineNumber": 5,
+      "columnNumber": 15,
+      "sourceCode": "export default function GlobalError({\n  error,\n  reset,\n}: {\n  error: Error & { digest?: string }\n  reset: () => void\n}) {\n  return (\n    <html>\n      <body>\n        <div style={{\n          minHeight: '100vh',\n          display: 'flex',\n          alignItems: 'center',\n          justifyContent: 'center',\n          padding: '2rem',\n          fontFamily: 'system-ui, sans-serif'\n        }}>\n          <div style={{ textAlign: 'center', maxWidth: '500px' }}>\n            <h1 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#dc2626' }}>\n              Something went wrong!\n            </h1>\n            <p style={{ fontSize: '1.1rem', marginBottom: '2rem', color: '#6b7280' }}>\n              The application encountered an unexpected error. This is likely temporary.\n            </p>\n            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>\n              <button\n                onClick={reset}\n                style={{\n                  padding: '0.75rem 1.5rem',\n                  backgroundColor: '#3b82f6',\n                  color: 'white',\n                  border: 'none',\n                  borderRadius: '0.5rem',\n                  cursor: 'pointer',\n                  fontSize: '1rem'\n                }}\n              >\n                Try Again\n              </button>\n              <button\n                onClick={() => window.location.href = '/'}\n                style={{\n                  padding: '0.75rem 1.5rem',\n                  backgroundColor: '#6b7280',\n                  color: 'white',\n                  border: 'none',\n                  borderRadius: '0.5rem',\n                  cursor: 'pointer',\n                  fontSize: '1rem'\n                }}\n              >\n                Go Home\n              </button>\n            </div>\n            {process.env.NODE_ENV === 'development' && (\n              <details style={{ marginTop: '2rem', textAlign: 'left' }}>\n                <summary style={{ cursor: 'pointer', fontWeight: 'bold' }}>\n                  Error Details (Development Only)\n                </summary>\n                <pre style={{ \n                  marginTop: '1rem', \n                  padding: '1rem', \n                  backgroundColor: '#f3f4f6', \n                  borderRadius: '0.5rem',\n                  fontSize: '0.875rem',\n                  overflow: 'auto'\n                }}>\n                  {error.message}\n                  {error.stack && '\\n\\nStack trace:\\n' + error.stack}\n                </pre>\n              </details>\n            )}\n          </div>\n        </div>\n      </body>\n    </html>\n  )\n}",
+      "props": [
+        {
+          "name": "error",
+          "type": "unknown",
+          "required": false
+        },
+        {
+          "name": "reset",
+          "type": "unknown",
+          "required": false
+        }
+      ],
+      "imports": [],
+      "modificationHints": [
+        "text-update",
+        "style-change",
+        "careful-modification",
+        "test-thoroughly"
+      ],
+      "astAnalysis": {
+        "componentType": "functional",
+        "complexity": "complex"
+      }
+    },
+    "phoenix-1757694248044": {
+      "phoenixId": "phoenix-1757694248044",
+      "componentName": "RootLayout",
+      "filePath": "src/app/layout.tsx",
+      "lineNumber": 25,
+      "columnNumber": 15,
+      "sourceCode": "export default function RootLayout({\n  children,\n}: Readonly<{\n  children: React.ReactNode;\n}>) {\n  return (\n    <html lang=\"en\" suppressHydrationWarning>\n      <body\n        className={`${geistSans.variable} ${geistMono.variable} antialiased`}\n      >\n        <QueryProvider>\n          <ThemeProvider\n            attribute=\"class\"\n            defaultTheme=\"system\"\n            enableSystem\n            disableTransitionOnChange\n          >\n            <TooltipProvider>\n              {children}\n              <Toaster />\n              <Sonner />\n            </TooltipProvider>\n          </ThemeProvider>\n        </QueryProvider>\n      </body>\n    </html>\n  );\n}",
+      "props": [
+        {
+          "name": "children",
+          "type": "unknown",
+          "required": false
+        }
+      ],
+      "imports": [],
+      "modificationHints": [
+        "text-update",
+        "style-change"
+      ],
+      "astAnalysis": {
+        "componentType": "functional",
+        "complexity": "moderate"
+      }
+    },
+    "phoenix-1757694248045": {
+      "phoenixId": "phoenix-1757694248045",
+      "componentName": "Loading",
+      "filePath": "src/app/loading.tsx",
+      "lineNumber": 1,
+      "columnNumber": 15,
+      "sourceCode": "export default function Loading() {\n  return (\n    <div className=\"min-h-screen flex items-center justify-center\">\n      <div className=\"text-center\">\n        <p className=\"text-xl\">Loading...</p>\n      </div>\n    </div>\n  );\n}",
+      "props": [],
+      "imports": [],
+      "modificationHints": [
+        "text-update",
+        "style-change"
+      ],
+      "astAnalysis": {
+        "componentType": "functional",
+        "complexity": "moderate"
+      }
+    },
+    "phoenix-1757694248046": {
+      "phoenixId": "phoenix-1757694248046",
+      "componentName": "NotFound",
+      "filePath": "src/app/not-found.tsx",
+      "lineNumber": 3,
+      "columnNumber": 15,
+      "sourceCode": "export default function NotFound() {\n  return (\n    <div className=\"min-h-screen flex items-center justify-center\">\n      <div className=\"text-center\">\n        <h1 className=\"text-4xl font-bold mb-4\">404 - Page Not Found</h1>\n        <p className=\"text-xl mb-4\">The page you are looking for does not exist.</p>\n        <a href=\"/\" className=\"text-blue-500 hover:text-blue-700 underline\">\n          Return to Home\n        </a>\n      </div>\n    </div>\n  );\n}",
+      "props": [],
+      "imports": [],
+      "modificationHints": [
+        "text-update",
+        "style-change"
+      ],
+      "astAnalysis": {
+        "componentType": "functional",
+        "complexity": "moderate"
+      }
+    },
+    "phoenix-1757694248047": {
+      "phoenixId": "phoenix-1757694248047",
+      "componentName": "IglooBuilder",
+      "filePath": "src/app/page.tsx",
+      "lineNumber": 5,
+      "columnNumber": 15,
+      "sourceCode": "export default function IglooBuilder() {\n  const [currentStep, setCurrentStep] = useState(1)\n  const [completedSteps, setCompletedSteps] = useState<number[]>([])\n\n  const toggleStepComplete = (step: number) => {\n    setCompletedSteps(prev =>\n      prev.includes(step)\n        ? prev.filter(s => s !== step)\n        : [...prev, step]\n    )\n  }\n\n  const steps = [\n    {\n      title: \"Choose Your Location\",\n      description: \"Find a flat area with packed snow at least 2 feet deep\",\n      details: [\n        \"Look for wind-packed snow for best building material\",\n        \"Avoid areas near trees or structures that could drop snow\",\n        \"Ensure you have enough space for a 10-12 foot diameter circle\",\n        \"Test snow consistency - it should hold together when squeezed\"\n      ]\n    },\n    {\n      title: \"Create the Foundation Circle\",\n      description: \"Mark and prepare your igloo base\",\n      details: [\n        \"Use a rope or string to mark a perfect circle (8-10 feet diameter)\",\n        \"Pack down the snow inside the circle firmly\",\n        \"Create a small entrance trench on one side\",\n        \"The entrance should face away from prevailing winds\"\n      ]\n    },\n    {\n      title: \"Cut Snow Blocks\",\n      description: \"Create uniform building blocks from quality snow\",\n      details: [\n        \"Cut blocks about 18 inches long, 12 inches wide, 6 inches thick\",\n        \"Use a snow saw or large knife for clean cuts\",\n        \"Test each block - it should support its own weight\",\n        \"You'll need approximately 150-200 blocks total\"\n      ]\n    },\n    {\n      title: \"Build the First Row\",\n      description: \"Lay the foundation spiral\",\n      details: [\n        \"Place blocks around your circle, leaving space for the entrance\",\n        \"Angle each block slightly inward (about 15 degrees)\",\n        \"Create a spiral by cutting the first row at an angle\",\n        \"Each block should lean on the previous one for stability\"\n      ]\n    },\n    {\n      title: \"Continue the Spiral\",\n      description: \"Build upward in a continuous spiral\",\n      details: [\n        \"Each new row should lean more inward than the last\",\n        \"Maintain the spiral pattern - never create distinct rows\",\n        \"Trim blocks to fit perfectly against neighbors\",\n        \"The dome should curve inward more dramatically as you go up\"\n      ]\n    },\n    {\n      title: \"Install the Capstone\",\n      description: \"Complete the dome with the final block\",\n      details: [\n        \"Save the largest, strongest block for last\",\n        \"Cut it to fit the remaining hole precisely\",\n        \"Lower it from inside the igloo\",\n        \"This block locks the entire structure in place\"\n      ]\n    },\n    {\n      title: \"Finish the Interior\",\n      description: \"Create a comfortable living space\",\n      details: [\n        \"Smooth interior walls with your hands or tools\",\n        \"Dig sleeping platform higher than entrance (warm air rises)\",\n        \"Create ventilation hole at top (small, about 2 inches)\",\n        \"Add snow blocks as furniture: shelves, seats, etc.\"\n      ]\n    },\n    {\n      title: \"Final Touches\",\n      description: \"Weatherproof and customize your igloo\",\n      details: [\n        \"Fill any gaps between blocks with loose snow\",\n        \"Light a small candle inside to glaze interior walls\",\n        \"Create a door with a snow block or tarp\",\n        \"Mark your igloo location for easy finding\"\n      ]\n    }\n  ]\n\n  return (\n    <div className=\"min-h-screen bg-gradient-to-b from-blue-50 to-white\">\n      {/* Header */}\n      <header className=\"bg-white shadow-lg border-b-4 border-blue-200\">\n        <div className=\"max-w-6xl mx-auto px-4 py-8\">\n          <div className=\"text-center\">\n            <h1 className=\"text-5xl font-bold text-blue-900 mb-4\">\n              🏔️ How to Build an Igloo\n            </h1>\n            <p className=\"text-xl text-blue-700 max-w-2xl mx-auto\">\n              Master the ancient art of snow architecture with our comprehensive step-by-step guide\n            </p>\n          </div>\n        </div>\n      </header>\n\n      {/* Progress Overview */}\n      <section className=\"max-w-6xl mx-auto px-4 py-8\">\n        <div className=\"bg-white rounded-lg shadow-lg p-6 mb-8\">\n          <h2 className=\"text-2xl font-bold text-gray-800 mb-4\">Your Progress</h2>\n          <div className=\"flex flex-wrap gap-2\">\n            {steps.map((_, index) => (\n              <div\n                key={index}\n                className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold cursor-pointer transition-all ${\n                  completedSteps.includes(index + 1)\n                    ? 'bg-green-500 text-white'\n                    : currentStep === index + 1\n                    ? 'bg-blue-500 text-white'\n                    : 'bg-gray-200 text-gray-600'\n                }`}\n                onClick={() => setCurrentStep(index + 1)}\n              >\n                {completedSteps.includes(index + 1) ? '✓' : index + 1}\n              </div>\n            ))}\n          </div>\n          <p className=\"mt-4 text-gray-600\">\n            Completed: {completedSteps.length} of {steps.length} steps\n          </p>\n        </div>\n      </section>\n\n      {/* Main Content */}\n      <main className=\"max-w-6xl mx-auto px-4 pb-12\">\n        <div className=\"grid grid-cols-1 lg:grid-cols-3 gap-8\">\n          \n          {/* Steps List */}\n          <div className=\"lg:col-span-1\">\n            <div className=\"bg-white rounded-lg shadow-lg p-6 sticky top-4\">\n              <h3 className=\"text-xl font-bold text-gray-800 mb-4\">Building Steps</h3>\n              <div className=\"space-y-2\">\n                {steps.map((step, index) => (\n                  <button\n                    key={index}\n                    className={`w-full text-left p-3 rounded-lg transition-all ${\n                      currentStep === index + 1\n                        ? 'bg-blue-100 border-2 border-blue-300'\n                        : completedSteps.includes(index + 1)\n                        ? 'bg-green-50 border border-green-200'\n                        : 'bg-gray-50 border border-gray-200 hover:bg-gray-100'\n                    }`}\n                    onClick={() => setCurrentStep(index + 1)}\n                  >\n                    <div className=\"flex items-center\">\n                      <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-3 ${\n                        completedSteps.includes(index + 1)\n                          ? 'bg-green-500 text-white'\n                          : currentStep === index + 1\n                          ? 'bg-blue-500 text-white'\n                          : 'bg-gray-300 text-gray-600'\n                      }`}>\n                        {completedSteps.includes(index + 1) ? '✓' : index + 1}\n                      </span>\n                      <span className=\"font-medium text-sm\">{step.title}</span>\n                    </div>\n                  </button>\n                ))}\n              </div>\n            </div>\n          </div>\n\n          {/* Current Step Detail */}\n          <div className=\"lg:col-span-2\">\n            <div className=\"bg-white rounded-lg shadow-lg p-8\">\n              <div className=\"flex items-center justify-between mb-6\">\n                <div>\n                  <h2 className=\"text-3xl font-bold text-blue-900\">\n                    Step {currentStep}: {steps[currentStep - 1].title}\n                  </h2>\n                  <p className=\"text-lg text-blue-700 mt-2\">\n                    {steps[currentStep - 1].description}\n                  </p>\n                </div>\n                <button\n                  onClick={() => toggleStepComplete(currentStep)}\n                  className={`px-6 py-3 rounded-lg font-semibold transition-all ${\n                    completedSteps.includes(currentStep)\n                      ? 'bg-green-500 text-white hover:bg-green-600'\n                      : 'bg-blue-500 text-white hover:bg-blue-600'\n                  }`}\n                >\n                  {completedSteps.includes(currentStep) ? 'Completed ✓' : 'Mark Complete'}\n                </button>\n              </div>\n\n              <div className=\"space-y-4\">\n                <h3 className=\"text-xl font-semibold text-gray-800\">Detailed Instructions:</h3>\n                <ul className=\"space-y-3\">\n                  {steps[currentStep - 1].details.map((detail, index) => (\n                    <li key={index} className=\"flex items-start\">\n                      <span className=\"bg-blue-100 text-blue-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0\">\n                        {index + 1}\n                      </span>\n                      <span className=\"text-gray-700\">{detail}</span>\n                    </li>\n                  ))}\n                </ul>\n              </div>\n\n              {/* Navigation */}\n              <div className=\"flex justify-between mt-8 pt-6 border-t border-gray-200\">\n                <button\n                  onClick={() => setCurrentStep(Math.max(1, currentStep - 1))}\n                  disabled={currentStep === 1}\n                  className=\"px-6 py-2 bg-gray-500 text-white rounded-lg disabled:bg-gray-300 disabled:cursor-not-allowed hover:bg-gray-600 transition-colors\"\n                >\n                  ← Previous\n                </button>\n                <button\n                  onClick={() => setCurrentStep(Math.min(steps.length, currentStep + 1))}\n                  disabled={currentStep === steps.length}\n                  className=\"px-6 py-2 bg-blue-500 text-white rounded-lg disabled:bg-gray-300 disabled:cursor-not-allowed hover:bg-blue-600 transition-colors\"\n                >\n                  Next →\n                </button>\n              </div>\n            </div>\n\n            {/* Tips Section */}\n            <div className=\"mt-8 bg-yellow-50 border border-yellow-200 rounded-lg p-6\">\n              <h3 className=\"text-lg font-semibold text-yellow-800 mb-3\">💡 Pro Tips</h3>\n              <div className=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-sm\">\n                <div>\n                  <h4 className=\"font-semibold text-yellow-800\">Safety First:</h4>\n                  <p className=\"text-yellow-700\">Always inform someone of your location and expected return time when building in remote areas.</p>\n                </div>\n                <div>\n                  <h4 className=\"font-semibold text-yellow-800\">Best Conditions:</h4>\n                  <p className=\"text-yellow-700\">Build when temperature is between 0°F and 20°F (-18°C to -7°C) for optimal snow consistency.</p>\n                </div>\n                <div>\n                  <h4 className=\"font-semibold text-yellow-800\">Tool Essentials:</h4>\n                  <p className=\"text-yellow-700\">Bring a snow saw, shovel, and measuring tape for best results.</p>\n                </div>\n                <div>\n                  <h4 className=\"font-semibold text-yellow-800\">Time Required:</h4>\n                  <p className=\"text-yellow-700\">Plan for 4-6 hours for your first igloo, 2-3 hours once experienced.</p>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </main>\n\n      {/* Footer */}\n      <footer className=\"bg-blue-900 text-blue-100 py-8 mt-12\">\n        <div className=\"max-w-6xl mx-auto px-4 text-center\">\n          <p className=\"mb-2\">Happy building! Stay warm and safe out there. ❄️</p>\n          <p className=\"text-sm opacity-75\">Remember: practice makes perfect. Your first igloo might not be perfect, but each one will be better than the last!</p>\n        </div>\n      </footer>\n    </div>\n  )\n}",
+      "props": [],
+      "imports": [],
+      "modificationHints": [
+        "text-update",
+        "style-change",
+        "careful-modification",
+        "test-thoroughly",
+        "state-management"
+      ],
+      "astAnalysis": {
+        "componentType": "functional",
+        "hooks": [
+          "useState",
+          "useState"
+        ],
+        "complexity": "complex"
+      }
+    },
+    "phoenix-1757694248048": {
+      "phoenixId": "phoenix-1757694248048",
+      "componentName": "QueryProvider",
+      "filePath": "src/components/query-provider.tsx",
+      "lineNumber": 6,
+      "columnNumber": 7,
+      "sourceCode": "export function QueryProvider({ children }: { children: React.ReactNode }) {\n  const [queryClient] = useState(() => new QueryClient())\n\n  return (\n    <QueryClientProvider client={queryClient}>\n      {children}\n    </QueryClientProvider>\n  )\n}",
+      "props": [
+        {
+          "name": "children",
+          "type": "unknown",
+          "required": false
+        }
+      ],
+      "imports": [],
+      "modificationHints": [
+        "text-update",
+        "style-change",
+        "state-management"
+      ],
+      "astAnalysis": {
+        "componentType": "functional",
+        "hooks": [
+          "useState"
+        ],
+        "complexity": "moderate"
+      }
+    },
+    "phoenix-1757694248049": {
+      "phoenixId": "phoenix-1757694248049",
+      "componentName": "ThemeProvider",
+      "filePath": "src/components/theme-provider.tsx",
+      "lineNumber": 6,
+      "columnNumber": 7,
+      "sourceCode": "export function ThemeProvider({\n  children,\n  ...props\n}: React.ComponentProps<typeof NextThemesProvider>) {\n  return <NextThemesProvider {...props}>{children}</NextThemesProvider>\n}",
+      "props": [
+        {
+          "name": "children",
+          "type": "unknown",
+          "required": false
+        }
+      ],
+      "imports": [],
+      "modificationHints": [
+        "text-update",
+        "style-change"
+      ],
+      "astAnalysis": {
+        "componentType": "functional",
+        "complexity": "simple"
+      }
+    },
+    "phoenix-1757694248050": {
+      "phoenixId": "phoenix-1757694248050",
+      "componentName": "Badge",
+      "filePath": "src/components/ui/badge.tsx",
+      "lineNumber": 30,
+      "columnNumber": 0,
+      "sourceCode": "function Badge({ className, variant, ...props }: BadgeProps) {\n  return (\n    <div className={cn(badgeVariants({ variant }), className)} {...props} />\n  )\n}",
+      "props": [
+        {
+          "name": "className",
+          "type": "unknown",
+          "required": false
+        },
+        {
+          "name": "variant",
+          "type": "unknown",
+          "required": false
+        }
+      ],
+      "imports": [],
+      "modificationHints": [
+        "text-update",
+        "style-change"
+      ],
+      "astAnalysis": {
+        "componentType": "functional",
+        "complexity": "moderate"
+      }
+    },
+    "phoenix-1757694248051": {
+      "phoenixId": "phoenix-1757694248051",
+      "componentName": "Calendar",
+      "filePath": "src/components/ui/calendar.tsx",
+      "lineNumber": 10,
+      "columnNumber": 0,
+      "sourceCode": "function Calendar({\n  className,\n  classNames,\n  showOutsideDays = true,\n  ...props\n}: CalendarProps) {\n  return (\n    <DayPicker\n      showOutsideDays={showOutsideDays}\n      className={cn(\"p-3\", className)}\n      classNames={{\n        months: \"flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0\",\n        month: \"space-y-4\",\n        caption: \"flex justify-center pt-1 relative items-center\",\n        caption_label: \"text-sm font-medium\",\n        nav: \"space-x-1 flex items-center\",\n        nav_button: cn(\n          buttonVariants({ variant: \"outline\" }),\n          \"h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100\"\n        ),\n        nav_button_previous: \"absolute left-1\",\n        nav_button_next: \"absolute right-1\",\n        table: \"w-full border-collapse space-y-1\",\n        head_row: \"flex\",\n        head_cell:\n          \"text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]\",\n        row: \"flex w-full mt-2\",\n        cell: \"h-9 w-9 text-center text-sm p-0 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20\",\n        day: cn(\n          buttonVariants({ variant: \"ghost\" }),\n          \"h-9 w-9 p-0 font-normal aria-selected:opacity-100\"\n        ),\n        day_range_end: \"day-range-end\",\n        day_selected:\n          \"bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground\",\n        day_today: \"bg-accent text-accent-foreground\",\n        day_outside:\n          \"day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30\",\n        day_disabled: \"text-muted-foreground opacity-50\",\n        day_range_middle:\n          \"aria-selected:bg-accent aria-selected:text-accent-foreground\",\n        day_hidden: \"invisible\",\n        ...classNames,\n      }}\n      components={{\n        Chevron: (props) => props.orientation === 'left' ? <ChevronLeft className=\"h-4 w-4\" /> : <ChevronRight className=\"h-4 w-4\" />,\n      }}\n      {...props}\n    />\n  );\n}",
+      "props": [
+        {
+          "name": "className",
+          "type": "unknown",
+          "required": false
+        },
+        {
+          "name": "classNames",
+          "type": "unknown",
+          "required": false
+        },
+        {
+          "name": "showOutsideDays",
+          "type": "unknown",
+          "required": false
+        }
+      ],
+      "imports": [],
+      "modificationHints": [
+        "text-update",
+        "style-change",
+        "careful-modification",
+        "test-thoroughly"
+      ],
+      "astAnalysis": {
+        "componentType": "functional",
+        "complexity": "complex"
+      }
+    },
+    "phoenix-1757694248052": {
+      "phoenixId": "phoenix-1757694248052",
+      "componentName": "Skeleton",
+      "filePath": "src/components/ui/skeleton.tsx",
+      "lineNumber": 3,
+      "columnNumber": 0,
+      "sourceCode": "function Skeleton({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n  return (\n    <div\n      className={cn(\"animate-pulse rounded-md bg-muted\", className)}\n      {...props}\n    />\n  )\n}",
+      "props": [
+        {
+          "name": "className",
+          "type": "unknown",
+          "required": false
+        }
+      ],
+      "imports": [],
+      "modificationHints": [
+        "text-update",
+        "style-change"
+      ],
+      "astAnalysis": {
+        "componentType": "functional",
+        "complexity": "simple"
+      }
+    },
+    "phoenix-1757694248053": {
+      "phoenixId": "phoenix-1757694248053",
+      "componentName": "Toaster",
+      "filePath": "src/components/ui/toaster.tsx",
+      "lineNumber": 13,
+      "columnNumber": 7,
+      "sourceCode": "export function Toaster() {\n  const { toasts } = useToast()\n\n  return (\n    <ToastProvider>\n      {toasts.map(function ({ id, title, description, action, ...props }) {\n        return (\n          <Toast key={id} {...props}>\n            <div className=\"grid gap-1\">\n              {title && <ToastTitle>{title}</ToastTitle>}\n              {description && (\n                <ToastDescription>{description}</ToastDescription>\n              )}\n            </div>\n            {action}\n            <ToastClose />\n          </Toast>\n        )\n      })}\n      <ToastViewport />\n    </ToastProvider>\n  )\n}",
+      "props": [],
+      "imports": [],
+      "modificationHints": [
+        "text-update",
+        "style-change"
+      ],
+      "astAnalysis": {
+        "componentType": "functional",
+        "hooks": [
+          "useToast"
+        ],
+        "complexity": "moderate"
+      }
+    }
+  },
+  "stats": {
+    "totalComponents": 12,
+    "totalFiles": 62,
+    "processingTimeMs": 683
+  }
+}
