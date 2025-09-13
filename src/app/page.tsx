@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import ShibaMeme from '@/components/ShibaMeme'
 
 export default function IglooBuilder() {
   const [currentStep, setCurrentStep] = useState(1)
@@ -106,9 +107,12 @@ export default function IglooBuilder() {
             <h1 className="text-5xl font-bold text-blue-900 mb-4">
               🏔️ How to Build an Igloo
             </h1>
-            <p className="text-xl text-blue-700 max-w-2xl mx-auto">
+            <p className="text-xl text-blue-700 max-w-2xl mx-auto mb-6">
               Master the ancient art of snow architecture with our comprehensive step-by-step guide
             </p>
+            <div className="flex justify-center">
+              <ShibaMeme />
+            </div>
           </div>
         </div>
       </header>
